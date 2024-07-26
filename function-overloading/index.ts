@@ -77,7 +77,7 @@ const admins = [
 ] as AdminInterface[];
 
 function map_arr<T>(arr: T[]): T[];
-function map_arr<T, K extends keyof T>(arr: T[], attributes?: K[]): (Pick<T, K>)[]
+function map_arr<T, K extends keyof T>(arr: T[], attributes: K[]): (Pick<T, K>)[]
 function map_arr<T, K extends keyof T>(arr: T[], attributes?: K[]){
 
     if( !attributes ) return arr as T[];
