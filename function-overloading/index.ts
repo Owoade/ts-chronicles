@@ -57,6 +57,7 @@ const users = [
         gender: "non-binary"
     }
 ] as UserInterface[];
+
 const admins = [
     {
         privileges: ["read", "write", "execute"],
