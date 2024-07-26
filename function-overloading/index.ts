@@ -81,14 +81,14 @@ function map_arr<T, K extends keyof T>(arr: T[], attributes?: K[]){
 
     if( !attributes ) return arr as T[];
 
-    const mapped_result = [] as any[]; 
+    const mapped_result = [] as (Pick<T, K>)[]; 
 
     for( let item of arr ){
 
         let mapped_object = attributes.reduce(( acc, attribute )=>{
             acc[attribute] = item[attribute];
             return acc
-        }, {} as any)
+        }, {} as Pick<T, K>)
 
         mapped_result.push(mapped_object);
 
